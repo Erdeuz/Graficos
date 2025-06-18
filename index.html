@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gráfico de Cotización</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Cotización de monedas</h1>
+  <canvas id="myChart" width="400" height="200"></canvas>
+  
+  <script>
+    new Chart(document.getElementById('myChart'), {
+      type: 'bar',
+      data: {
+        labels: ['USD', 'EUR', 'BRL'],
+        datasets: [{
+          label: 'Cotización',
+          data: [1200, 1300, 250],
+          backgroundColor: ['#36A2EB', '#FF6384', '#4BC0C0']
+        }]
+      }
+    });
+  </script>
+</body>
+</html>
